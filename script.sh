@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# AutoEnvLuks
+# Auteur: dvm_khpte
+
 if [ "${EUID:-0}" -ne 0 ]; then
   echo "Erreur : ce script doit être lancé en root." >&2
   exit 1
@@ -36,7 +39,7 @@ EOF
   exit 1
 }
 
-# Toujours balancer le help au nuloss
+# Toujours balancer le help
 if [ $# -lt 1 ]; then
   usage
 fi
